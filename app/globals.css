@@ -1,0 +1,65 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 255 255 255;
+    --foreground: 15 15 15;
+    --accent: 0 71 255;
+    --secondary: 244 244 246;
+    --border: 229 229 229;
+  }
+
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-primary font-body antialiased;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+
+  .tap-target {
+    @apply min-h-[48px] min-w-[48px];
+  }
+}
+
+@layer components {
+  .container-custom {
+    @apply max-w-[1920px] mx-auto px-4 sm:px-6 lg:px-8 xl:px-12;
+  }
+
+  .section-padding {
+    @apply py-16 sm:py-20 lg:py-24 xl:py-32;
+  }
+
+  .btn-primary {
+    @apply inline-flex items-center justify-center px-8 py-4 bg-primary text-background font-display font-semibold tracking-tight hover:bg-accent transition-colors duration-300 tap-target;
+  }
+
+  .btn-secondary {
+    @apply inline-flex items-center justify-center px-8 py-4 border-2 border-primary text-primary font-display font-semibold tracking-tight hover:bg-primary hover:text-background transition-colors duration-300 tap-target;
+  }
+
+  .product-card {
+    @apply group relative overflow-hidden bg-white;
+  }
+
+  .product-card-image {
+    @apply aspect-[3/4] w-full overflow-hidden bg-secondary;
+  }
+
+  .product-card-overlay {
+    @apply absolute inset-0 bg-black/0 group-hover:bg-black/10 transition-colors duration-300;
+  }
+}
