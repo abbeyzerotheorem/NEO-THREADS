@@ -110,7 +110,7 @@ export function generateCollectionSchema(collection: Collection) {
 }
 
 export function generateBrandSchema() {
-  const { brand, contact, socialLinks } = fashionConfig;
+  const { brand, contact } = fashionConfig;
 
   return {
     "@context": "https://schema.org",
@@ -127,7 +127,7 @@ export function generateBrandSchema() {
       areaServed: "US",
       availableLanguage: "English"
     },
-    sameAs: socialLinks.map(link => link.url),
+    sameAs: brand.socialLinks.map(link => link.url),
     address: {
       "@type": "PostalAddress",
       streetAddress: contact.returnsHubAddress

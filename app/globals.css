@@ -1,65 +1,172 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import "tailwindcss";
 
-@layer base {
-  :root {
-    --background: 255 255 255;
-    --foreground: 15 15 15;
-    --accent: 0 71 255;
-    --secondary: 244 244 246;
-    --border: 229 229 229;
+@theme {
+  --color-background: #FFFFFF;
+  --color-primary: #0F0F0F;
+  --color-accent: #0047FF;
+  --color-secondary: #F4F4F6;
+  --color-border: #E5E5E5;
+
+  --font-display: var(--font-display), system-ui, sans-serif;
+  --font-body: var(--font-body), system-ui, sans-serif;
+  --font-mono: var(--font-mono), monospace;
+
+  --spacing-128: 32rem;
+  --spacing-144: 36rem;
+
+  --animate-fade-in: fadeIn 0.6s ease-out;
+  --animate-slide-up: slideUp 0.6s ease-out;
+  --animate-slide-in-right: slideInRight 0.4s ease-out;
+}
+
+@keyframes fadeIn {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+@keyframes slideUp {
+  0% { transform: translateY(20px); opacity: 0; }
+  100% { transform: translateY(0); opacity: 1; }
+}
+
+@keyframes slideInRight {
+  0% { transform: translateX(100%); }
+  100% { transform: translateX(0); }
+}
+
+/*
+  The default border color has changed to `currentColor` in Tailwind CSS v4,
+  so we apply it explicitly.
+*/
+* {
+  border-color: var(--color-border, #E5E5E5);
+}
+
+body {
+  background-color: var(--color-background);
+  color: var(--color-primary);
+  font-family: var(--font-body), system-ui, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+.text-balance {
+  text-wrap: balance;
+}
+
+.tap-target {
+  min-height: 48px;
+  min-width: 48px;
+}
+
+@utility container-custom {
+  max-width: 1920px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 1rem;
+  padding-right: 1rem;
+
+  @media (width >= 640px) {
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
   }
 
-  * {
-    @apply border-border;
+  @media (width >= 1024px) {
+    padding-left: 2rem;
+    padding-right: 2rem;
   }
 
-  body {
-    @apply bg-background text-primary font-body antialiased;
-  }
-
-  html {
-    scroll-behavior: smooth;
+  @media (width >= 1280px) {
+    padding-left: 3rem;
+    padding-right: 3rem;
   }
 }
 
-@layer utilities {
-  .text-balance {
-    text-wrap: balance;
+@utility section-padding {
+  padding-top: 4rem;
+  padding-bottom: 4rem;
+
+  @media (width >= 640px) {
+    padding-top: 5rem;
+    padding-bottom: 5rem;
   }
 
-  .tap-target {
-    @apply min-h-[48px] min-w-[48px];
+  @media (width >= 1024px) {
+    padding-top: 6rem;
+    padding-bottom: 6rem;
+  }
+
+  @media (width >= 1280px) {
+    padding-top: 8rem;
+    padding-bottom: 8rem;
   }
 }
 
-@layer components {
-  .container-custom {
-    @apply max-w-[1920px] mx-auto px-4 sm:px-6 lg:px-8 xl:px-12;
-  }
+@utility btn-primary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding-left: 2rem;
+  padding-right: 2rem;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  background-color: var(--color-primary);
+  color: var(--color-background);
+  font-family: var(--font-display), system-ui, sans-serif;
+  font-weight: 600;
+  letter-spacing: -0.025em;
+  transition: background-color 0.3s;
 
-  .section-padding {
-    @apply py-16 sm:py-20 lg:py-24 xl:py-32;
+  &:hover {
+    background-color: var(--color-accent);
   }
+}
 
-  .btn-primary {
-    @apply inline-flex items-center justify-center px-8 py-4 bg-primary text-background font-display font-semibold tracking-tight hover:bg-accent transition-colors duration-300 tap-target;
+@utility btn-secondary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding-left: 2rem;
+  padding-right: 2rem;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  border: 2px solid var(--color-primary);
+  color: var(--color-primary);
+  font-family: var(--font-display), system-ui, sans-serif;
+  font-weight: 600;
+  letter-spacing: -0.025em;
+  transition: background-color 0.3s, color 0.3s;
+
+  &:hover {
+    background-color: var(--color-primary);
+    color: var(--color-background);
   }
+}
 
-  .btn-secondary {
-    @apply inline-flex items-center justify-center px-8 py-4 border-2 border-primary text-primary font-display font-semibold tracking-tight hover:bg-primary hover:text-background transition-colors duration-300 tap-target;
-  }
+@utility product-card {
+  position: relative;
+  overflow: hidden;
+  background-color: white;
+}
 
-  .product-card {
-    @apply group relative overflow-hidden bg-white;
-  }
+@utility product-card-image {
+  width: 100%;
+  aspect-ratio: 3 / 4;
+  overflow: hidden;
+  background-color: var(--color-secondary);
+}
 
-  .product-card-image {
-    @apply aspect-[3/4] w-full overflow-hidden bg-secondary;
-  }
+@utility product-card-overlay {
+  position: absolute;
+  inset: 0;
+  background-color: transparent;
+  transition: background-color 0.3s;
 
-  .product-card-overlay {
-    @apply absolute inset-0 bg-black/0 group-hover:bg-black/10 transition-colors duration-300;
+  .group:hover & {
+    background-color: rgb(0 0 0 / 0.1);
   }
 }
