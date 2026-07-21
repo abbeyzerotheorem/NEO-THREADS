@@ -4,6 +4,7 @@ export interface ColorVariant {
   hexCode: string;
   imagePrimary: string;
   imageSecondary: string;
+  imageDimensions?: { width: number; height: number };
 }
 
 export interface Size {
@@ -23,6 +24,7 @@ export interface Product {
   stockQuantity: number;
   imagePrimary: string;
   imageSecondary: string;
+  imageDimensions?: { width: number; height: number };
   labels: ProductLabel[];
   isNew: boolean;
   isBestseller: boolean;
@@ -30,14 +32,14 @@ export interface Product {
   careInstructions: string[];
 }
 
-export type ProductCategory = 
+export type ProductCategory =
   | "outerwear"
   | "essentials"
   | "tailoring"
   | "footwear"
   | "accessories";
 
-export type ProductLabel = 
+export type ProductLabel =
   | "New Drop"
   | "Limited Edition"
   | "Bestseller"
@@ -50,6 +52,7 @@ export interface Collection {
   name: string;
   description: string;
   image: string;
+  imageDimensions?: { width: number; height: number };
   productIds: string[];
   order: number;
 }
@@ -61,8 +64,10 @@ export interface DropTimerConfig {
   alertText: string;
 }
 
+export type SocialPlatform = "instagram" | "twitter" | "tiktok";
+
 export interface SocialLink {
-  platform: string;
+  platform: SocialPlatform;
   url: string;
   handle: string;
 }
@@ -102,6 +107,7 @@ export interface Lookbook {
   title: string;
   description: string;
   image: string;
+  imageDimensions?: { width: number; height: number };
   hotspots: LookbookHotspot[];
 }
 
@@ -117,17 +123,38 @@ export interface Review {
   helpfulCount: number;
 }
 
+export type FAQCategory = "shipping" | "returns" | "sizing" | "drop-day" | "general";
+
 export interface FAQ {
   id: string;
   question: string;
   answer: string;
-  category: "shipping" | "returns" | "sizing" | "drop-day" | "general";
+  category: FAQCategory;
 }
 
 export interface SustainabilityMetric {
   label: string;
   value: string;
   description: string;
+}
+
+export interface FooterLink {
+  name: string;
+  href: string;
+}
+
+export interface FooterLinkGroup {
+  shop: FooterLink[];
+  support: FooterLink[];
+  company: FooterLink[];
+  legal: FooterLink[];
+}
+
+export interface CartItem {
+  product: Product;
+  colorVariant: ColorVariant;
+  size: Size;
+  quantity: number;
 }
 
 export interface FashionConfig {
@@ -141,4 +168,5 @@ export interface FashionConfig {
   contact: ContactInfo;
   shipping: ShippingTier[];
   sustainability: SustainabilityMetric[];
+  footerLinks: FooterLinkGroup;
 }

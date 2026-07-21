@@ -50,15 +50,15 @@ export const fashionConfig: FashionConfig = {
           id: "black",
           name: "Obsidian Black",
           hexCode: "#0F0F0F",
-          imagePrimary: "https://images.unsplash.com/photo-1591047139829-d91aecb6caea?w=800&q=80",
-          imageSecondary: "https://images.unsplash.com/photo-1594938298603-c8148c4dae35?w=800&q=80"
+          imagePrimary: "/ObsidianWool.jpeg",
+          imageSecondary: "/ObsidianWoolOvercoat.jpeg"
         },
         {
           id: "charcoal",
           name: "Deep Charcoal",
           hexCode: "#2C2C2C",
-          imagePrimary: "https://images.unsplash.com/photo-1539533018447-63fcce2678e3?w=800&q=80",
-          imageSecondary: "https://images.unsplash.com/photo-1507680434567-5739c80be1ac?w=800&q=80"
+          imagePrimary: "/ObsidianWoolcharcoal.jpeg",
+          imageSecondary: "/ObsidianWoolcharcoal2.jpeg"
         }
       ],
       stockQuantity: 22,
@@ -89,15 +89,15 @@ export const fashionConfig: FashionConfig = {
           id: "navy",
           name: "Midnight Navy",
           hexCode: "#1A237E",
-          imagePrimary: "https://images.unsplash.com/photo-1507679799987-c73779587ccf?w=800&q=80",
-          imageSecondary: "https://images.unsplash.com/photo-1594938298603-c8148c4dae35?w=800&q=80"
+          imagePrimary: "/StructureBlazer.avif",
+          imageSecondary: "/StructureBlazer2.avif"
         },
         {
           id: "cream",
           name: "Stone Cream",
           hexCode: "#F5F5DC",
-          imagePrimary: "https://images.unsplash.com/photo-1598808503746-f34c53b9323e?w=800&q=80",
-          imageSecondary: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=800&q=80"
+          imagePrimary: "/StructureBlazer.jpeg",
+          imageSecondary: "/StructureBlazer2.jpeg"
         }
       ],
       stockQuantity: 28,
@@ -127,15 +127,15 @@ export const fashionConfig: FashionConfig = {
           id: "white",
           name: "Studio White",
           hexCode: "#FFFFFF",
-          imagePrimary: "https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?w=800&q=80",
-          imageSecondary: "https://images.unsplash.com/photo-1583743814966-8936f5b7be1a?w=800&q=80"
+          imagePrimary: "/EssentialCottonTee.jpeg",
+          imageSecondary: "/EssentialCottonTee2.jpeg"
         },
         {
           id: "black",
           name: "Carbon Black",
           hexCode: "#1A1A1A",
-          imagePrimary: "https://images.unsplash.com/photo-1583743814966-8936f5b7be1a?w=800&q=80",
-          imageSecondary: "https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?w=800&q=80"
+          imagePrimary: "/EssentialCotton.jpeg",
+          imageSecondary: "/EssentialCotton2.jpeg"
         }
       ],
       stockQuantity: 90,
@@ -165,15 +165,15 @@ export const fashionConfig: FashionConfig = {
           id: "olive",
           name: "Military Olive",
           hexCode: "#556B2F",
-          imagePrimary: "https://images.unsplash.com/photo-1473966968600-fa801b869a1a?w=800&q=80",
-          imageSecondary: "https://images.unsplash.com/photo-1542272604-787c3835535d?w=800&q=80"
+          imagePrimary: "/TechnicalCargoPant.jpeg",
+          imageSecondary: "/TechnicalCargoPant2.jpeg"
         },
         {
           id: "black",
           name: "Tactical Black",
           hexCode: "#0F0F0F",
-          imagePrimary: "https://images.unsplash.com/photo-1542272604-787c3835535d?w=800&q=80",
-          imageSecondary: "https://images.unsplash.com/photo-1473966968600-fa801b869a1a?w=800&q=80"
+          imagePrimary: "/TechnicalCargo.jpeg",
+          imageSecondary: "/TechnicalCargo2.jpeg"
         }
       ],
       stockQuantity: 36,
@@ -204,15 +204,15 @@ export const fashionConfig: FashionConfig = {
           id: "brown",
           name: "Cognac Brown",
           hexCode: "#9F7B4F",
-          imagePrimary: "https://images.unsplash.com/photo-1608256246200-53e635b5b65f?w=800&q=80",
-          imageSecondary: "https://images.unsplash.com/photo-1606107557195-0e29a4b5b4aa?w=800&q=80"
+          imagePrimary: "/ArchiveLeatherBoot.jpeg",
+          imageSecondary: "/ArchiveLeatherBoot2.jpeg"
         },
         {
           id: "black",
           name: "Matte Black",
           hexCode: "#1A1A1A",
-          imagePrimary: "https://images.unsplash.com/photo-1606107557195-0e29a4b5b4aa?w=800&q=80",
-          imageSecondary: "https://images.unsplash.com/photo-1608256246200-53e635b5b65f?w=800&q=80"
+          imagePrimary: "/LeatherBoot.jpeg",
+          imageSecondary: "/LeatherBoot2.jpeg"
         }
       ],
       stockQuantity: 23,
@@ -241,15 +241,15 @@ export const fashionConfig: FashionConfig = {
           id: "brown",
           name: "Natural Tan",
           hexCode: "#D2B48C",
-          imagePrimary: "https://images.unsplash.com/photo-1553062407-98eeb64c6a62?w=800&q=80",
-          imageSecondary: "https://images.unsplash.com/photo-1624222247344-550fb60583dc?w=800&q=80"
+          imagePrimary: "/MinimalistLeatherBelt.jpeg",
+          imageSecondary: "/MinimalistLeatherBelt2.jpeg"
         },
         {
           id: "black",
           name: "Jet Black",
           hexCode: "#0F0F0F",
-          imagePrimary: "https://images.unsplash.com/photo-1624222247344-550fb60583dc?w=800&q=80",
-          imageSecondary: "https://images.unsplash.com/photo-1553062407-98eeb64c6a62?w=800&q=80"
+          imagePrimary: "/LeatherBelt.jpeg",
+          imageSecondary: "/LeatherBelt2.jpeg"
         }
       ],
       stockQuantity: 36,
@@ -279,15 +279,15 @@ export const fashionConfig: FashionConfig = {
           id: "grey",
           name: "Heather Grey",
           hexCode: "#808080",
-          imagePrimary: "https://images.unsplash.com/photo-1434389677669-e08b4cac3105?w=800&q=80",
-          imageSecondary: "https://images.unsplash.com/photo-1576566588028-4147f3842f27?w=800&q=80"
+          imagePrimary: "/StructuredKnitSweater.avif",
+          imageSecondary: "/StructuredKnitSweater.jpeg"
         },
         {
           id: "navy",
           name: "Deep Navy",
           hexCode: "#1A237E",
-          imagePrimary: "https://images.unsplash.com/photo-1576566588028-4147f3842f27?w=800&q=80",
-          imageSecondary: "https://images.unsplash.com/photo-1434389677669-e08b4cac3105?w=800&q=80"
+          imagePrimary: "/KnitSweater.jpeg",
+          imageSecondary: "/KnitSweater2.jpeg"
         }
       ],
       stockQuantity: 30,
@@ -317,15 +317,15 @@ export const fashionConfig: FashionConfig = {
           id: "green",
           name: "Forest Green",
           hexCode: "#228B22",
-          imagePrimary: "https://images.unsplash.com/photo-1551028719-00167b16eac5?w=800&q=80",
-          imageSecondary: "https://images.unsplash.com/photo-1591047139829-d91aecb6caea?w=800&q=80"
+          imagePrimary: "/QuiltedFieldJacket2.jpeg",
+          imageSecondary: "/QuiltedFieldJacket.jpeg"
         },
         {
           id: "black",
           name: "Stealth Black",
           hexCode: "#0F0F0F",
-          imagePrimary: "https://images.unsplash.com/photo-1591047139829-d91aecb6caea?w=800&q=80",
-          imageSecondary: "https://images.unsplash.com/photo-1551028719-00167b16eac5?w=800&q=80"
+          imagePrimary: "/QuiltedField.jpg",
+          imageSecondary: "/QuiltedField.jpeg"
         }
       ],
       stockQuantity: 18,
@@ -343,7 +343,7 @@ export const fashionConfig: FashionConfig = {
       id: "COL-001",
       name: "Outerwear",
       description: "Statement pieces engineered for protection and style. Our outerwear collection combines technical performance with refined aesthetics.",
-      image: "https://images.unsplash.com/photo-1591047139829-d91aecb6caea?w=800&q=80",
+      image: "/Outerwear.jpeg",
       productIds: ["NT-001", "NT-008"],
       order: 1
     },
@@ -351,7 +351,7 @@ export const fashionConfig: FashionConfig = {
       id: "COL-002",
       name: "Essentials",
       description: "The foundation of every modern wardrobe. Timeless pieces crafted from premium materials for everyday wear.",
-      image: "https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?w=800&q=80",
+      image: "/Essentials.jpeg",
       productIds: ["NT-003", "NT-004", "NT-007"],
       order: 2
     },
@@ -359,7 +359,7 @@ export const fashionConfig: FashionConfig = {
       id: "COL-003",
       name: "Tailoring",
       description: "Contemporary silhouettes that redefine power dressing. Precision-cut garments for the modern professional.",
-      image: "https://images.unsplash.com/photo-1507679799987-c73779587ccf?w=800&q=80",
+      image: "/Tailoring.jpeg",
       productIds: ["NT-002"],
       order: 3
     },
@@ -367,7 +367,7 @@ export const fashionConfig: FashionConfig = {
       id: "COL-004",
       name: "Footwear",
       description: "Handcrafted footwear built to last. Each pair represents the pinnacle of Italian craftsmanship.",
-      image: "https://images.unsplash.com/photo-1608256246200-53e635b5b65f?w=800&q=80",
+      image: "/Footwear.jpeg",
       productIds: ["NT-005"],
       order: 4
     }
@@ -406,7 +406,7 @@ export const fashionConfig: FashionConfig = {
       id: "LB-002",
       title: "Urban Utility",
       description: "Technical meets tailored in our urban utility edit. Pieces designed for the city that never sleeps.",
-      image: "https://images.unsplash.com/photo-1515886657613-9f3517b0c78c?w=1200&q=80",
+      image: "/SummerCapsule.jpeg",
       hotspots: [
         {
           id: "HS-004",
@@ -577,12 +577,38 @@ export const fashionConfig: FashionConfig = {
     {
       label: "Recycled Materials",
       value: "35%",
-      description: "35% of our materials are recycled or upcycled, with a goal of reaching 50% by 2025."
+      description: "35% of our materials are recycled or upcycled, with a goal of reaching 50% by 2026."
     },
     {
       label: "Fair Trade",
       value: "100%",
       description: "All our manufacturing partners are Fair Trade certified, ensuring fair wages and safe working conditions."
     }
-  ]
+  ],
+  footerLinks: {
+    shop: [
+      { name: "New Arrivals", href: "#shop" },
+      { name: "Bestsellers", href: "#shop" },
+      { name: "Collections", href: "#collections" },
+      { name: "Sale", href: "#shop" }
+    ],
+    support: [
+      { name: "Contact Us", href: "#contact" },
+      { name: "FAQs", href: "#faq" },
+      { name: "Shipping Info", href: "#faq" },
+      { name: "Returns", href: "#faq" }
+    ],
+    company: [
+      { name: "About Us", href: "#about" },
+      { name: "Sustainability", href: "#about" },
+      { name: "Careers", href: "#contact" },
+      { name: "Press", href: "#contact" }
+    ],
+    legal: [
+      { name: "Privacy Policy", href: "#" },
+      { name: "Terms of Service", href: "#" },
+      { name: "Cookie Policy", href: "#" },
+      { name: "Accessibility", href: "#" }
+    ]
+  }
 };

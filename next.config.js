@@ -12,9 +12,7 @@ const nextConfig = {
   experimental: {
     optimizePackageImports: ['lucide-react'],
   },
-  typescript: {
-    ignoreBuildErrors: true,
-  },
+
 };
 
 module.exports = nextConfig;

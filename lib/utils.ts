@@ -1,5 +1,6 @@
 import { type ClassValue, clsx } from "clsx";
 import { twMerge } from "tailwind-merge";
+import type { CartItem } from "@/types/fashion";
 
 export function cn(...inputs: ClassValue[]) {
   return twMerge(clsx(inputs));
@@ -40,3 +41,40 @@ export function getRemainingTime(targetDate: Date): {
 
   return { days, hours, minutes, seconds };
 }
+
+const CART_STORAGE_KEY = "neo-threads-cart";
+
+export function loadCart(): CartItem[] {
+  if (typeof window === "undefined") return [];
+  try {
+    const saved = localStorage.getItem(CART_STORAGE_KEY);
+    if (!saved) return [];
+    const parsed = JSON.parse(saved);
+    if (!Array.isArray(parsed)) return [];
+    return parsed as CartItem[];
+  } catch {
+    return [];
+  }
+}
+
+export function saveCart(items: CartItem[]): void {
+  if (typeof window === "undefined") return;
+  try {
+    localStorage.setItem(CART_STORAGE_KEY, JSON.stringify(items));
+  } catch {
+    // Storage full or unavailable
+  }
+}
+
+export function getCartTotal(items: CartItem[]): number {
+  return items.reduce(
+    (sum, item) => sum + (item.product.discountPrice || item.product.price) * item.quantity,
+    0
+  );
+}
+
+export function getCartCount(items: CartItem[]): number {
+  return items.reduce((sum, item) => sum + item.quantity, 0);
+}
+
+export const FREE_SHIPPING_THRESHOLD = 250;

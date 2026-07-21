@@ -19,11 +19,11 @@ export function generateMetadata() {
     openGraph: {
       title: `${brand.name} | ${brand.tagline}`,
       description: brand.description,
-      url: "https://neothreads.com",
+      url: "https://neo-threads.vercel.app/",
       siteName: brand.name,
       images: [
         {
-          url: "https://images.unsplash.com/photo-1490481651871-ab68de25d43d?w=1200&q=80",
+          url: "/hero2.jpeg",
           width: 1200,
           height: 630,
           alt: `${brand.name} Collection`
@@ -37,7 +37,7 @@ export function generateMetadata() {
       title: `${brand.name} | ${brand.tagline}`,
       description: brand.description,
       images: [
-        "https://images.unsplash.com/photo-1490481651871-ab68de25d43d?w=1200&q=80"
+        "/hero.jpeg"
       ]
     },
     robots: {
@@ -46,9 +46,9 @@ export function generateMetadata() {
       googleBot: {
         index: true,
         follow: true,
-        "max-video-preview": -1,
-        "max-image-preview": "large",
-        "max-snippet": -1
+        maxVideoPreview: -1,
+        maxImagePreview: "large",
+        maxSnippet: -1
       }
     },
     verification: {
@@ -73,7 +73,7 @@ export function generateProductSchema(product: Product) {
     },
     offers: {
       "@type": "Offer",
-      url: `https://neothreads.com/products/${product.id}`,
+      url: `https://neo-threads.vercel.app/products/${product.id}`,
       priceCurrency: "USD",
       price: product.discountPrice || product.price,
       priceValidUntil: new Date(Date.now() + 30 * 24 * 60 * 60 * 1000).toISOString(),
@@ -117,7 +117,7 @@ export function generateBrandSchema() {
     "@type": "Organization",
     name: brand.name,
     description: brand.description,
-    url: "https://neothreads.com",
+    url: "https://neo-threads.vercel.app/",
     logo: brand.logo,
     contactPoint: {
       "@type": "ContactPoint",
@@ -155,10 +155,10 @@ export function generateWebsiteSchema() {
     "@context": "https://schema.org",
     "@type": "WebSite",
     name: brand.name,
-    url: "https://neothreads.com",
+    url: "https://neo-threads.vercel.app/",
     potentialAction: {
       "@type": "SearchAction",
-      target: "https://neothreads.com/search?q={search_term_string}",
+      target: "https://neo-threads.vercel.app/search?q={search_term_string}",
       "query-input": "required name=search_term_string"
     }
   };
